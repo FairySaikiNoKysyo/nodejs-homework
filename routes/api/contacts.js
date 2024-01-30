@@ -1,6 +1,6 @@
 import express from 'express'
 import contactsControlers from '../../controlers/contacts-controlers.js'
-import isEmptyBody from '../../middlewares/isEmptyBody.js'
+import {isEmptyBody}from '../../middlewares/index.js'
 import validateBody from '../../middlewares/validateBody.js'
 import { addContactScheme,updateContactScheme } from '../../schemes/contactsSchemes.js'
 

@@ -1,5 +1,6 @@
 import * as contactsService from '../models/contacts.js'
 import {HttpError} from '../helpers/index.js'
+import {ctrlWrapper} from '../middlewares/index.js';
 
 const getAllContacts = async(req,res)=>{
     const result = await contactsService.listContacts();
@@ -36,9 +37,9 @@ const updateContact = async(req,res)=>{
     res.json(result).status(200);
 }
 export default{
-    getAllContacts,
-    getContactById,
-    addContact,
-    deleteContact,
-    updateContact
+    getAllContacts: ctrlWrapper(getAllContacts),
+    getContactById: ctrlWrapper(getContactById),
+    addContact: ctrlWrapper(addContact),
+    deleteContact: ctrlWrapper(deleteContact),
+    updateContact: ctrlWrapper(updateContact)
 }
