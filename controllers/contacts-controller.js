@@ -11,9 +11,7 @@ const getAll = async (req, res) => {
     "owner",
     "email subscription"
   );
-  if (!result.length) {
-    throw HttpError(404, `No contacts added yet`);
-  }
+
   const total = result.length;
   res.json({
     result,
