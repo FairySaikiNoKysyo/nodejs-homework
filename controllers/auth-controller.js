@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import dotenv from 'dotenv/config';
+import dotenv from 'dotenv';
 import fs from 'fs/promises';
 import path from "path";
 import gravatar from 'gravatar';
