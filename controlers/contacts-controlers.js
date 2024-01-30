@@ -16,7 +16,7 @@ const getContactById = async(req,res)=>{
 }
 const addContact = async(req,res)=>{
     const result = await contactsService.addContact(req.body);
-    res.json(result).status(201);
+    res.status(201).json(result);
 }
 const  deleteContact = async(req,res)=>{
    const {contactId} = req.params;
